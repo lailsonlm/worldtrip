@@ -1,9 +1,11 @@
 import Head from "next/head";
 import { Flex, Image, Heading, Text, Box } from '@chakra-ui/react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper';
+import { Navigation, Pagination } from 'swiper';
 
 import { Header } from "../components/Header";
+import { TravelTypes } from "../components/TravelTypes";
+import { SwiperContent } from "../components/SwiperContent";
 
 export default function Home () {
   return (
@@ -67,65 +69,12 @@ export default function Home () {
           m="80.79px auto 80px auto"
           justifyContent="space-between"
         >
-          <Flex flexDir="column" alignItems="center">
-            <Image 
-              src='./cocktail.svg' 
-              alt='Vida Noturna' 
-              mb="24px"
-            />
-            <Text
-              fontSize="24" 
-              fontWeight= "semibold"
-              color="gray.400"
-            >vida noturna</Text>
-          </Flex>
-          <Flex flexDir="column" alignItems="center">
-            <Image 
-              src='./surf.svg' 
-              alt='Praia' 
-              mb="24px"
-            />
-            <Text
-              fontSize="24" 
-              fontWeight= "semibold"
-              color="gray.400"
-            >praia</Text>
-          </Flex>
-          <Flex flexDir="column" alignItems="center">
-            <Image 
-              src='./building.svg' 
-              alt='Moderno' 
-              mb="24px"
-            />
-            <Text
-              fontSize="24" 
-              fontWeight= "semibold"
-              color="gray.400"
-            >moderno</Text>
-          </Flex>
-          <Flex flexDir="column" alignItems="center">
-            <Image 
-              src='./museum.svg' 
-              alt='Clássico' 
-              mb="24px"
-            />
-            <Text
-              fontSize="24" 
-              fontWeight= "semibold"
-              color="gray.400"
-            >clássico</Text>
-          </Flex>
-          <Flex flexDir="column" alignItems="center">
-            <Image 
-              src='./earth.svg' 
-              alt='e mais...' 
-              mb="24px"
-            />
-            <Text
-              fontSize="24" 
-              fontWeight= "semibold"
-            >e mais...</Text>
-          </Flex>
+          <TravelTypes image='./cocktail.svg' alt='Vida Noturna' subtitle="vida noturna" />
+          <TravelTypes image='./surf.svg' alt='Praia' subtitle="praia" />
+          <TravelTypes image='./building.svg' alt='Moderno' subtitle="moderno" />
+          <TravelTypes image='./museum.svg' alt='Clássico' subtitle="clássico" />
+          <TravelTypes image='./earth.svg' alt='e mais...' subtitle="e mais..." />
+
         </Flex>
 
         <Box w={90} border='2px' borderColor="gray.400" m="0 auto" />
@@ -140,153 +89,71 @@ export default function Home () {
         </Heading>
 
         <Flex
-              w="100%"
-              maxW={1240}
-              h={450}
-              m="0 auto"
-            >
+          w="100%"
+          maxW={1240}
+          h={450}
+          m="0 auto"
+        >
 
           <Swiper 
-            modules={[Navigation, Pagination, EffectFade]}
+            modules={[Navigation, Pagination]}
             spaceBetween={30}
             slidesPerView={1}
             navigation
             loop
-            // effect={"fade"}
             pagination={{ clickable: true }}
             className="swiper"
           >
             <SwiperSlide>
-              <Image 
-                src='./continent_europa.jpg' 
-                alt='Europa'
+              <SwiperContent 
+                image='./continent_north_america.jpg' 
+                alt='América do Norte' 
+                heading='América do Norte' 
+                subtitle='Formada por três países: Estados Unidos, Canadá e México.' 
               />
-              <Heading
-                fontSize="48" 
-                fontWeight= "bold"
-                color="gray.100"
-              >
-                Europa
-              </Heading>
-              <Text
-                fontSize="24" 
-                fontWeight= "bold"
-                color="gray.200"
-              >
-                O continente mais antigo
-              </Text>
             </SwiperSlide>
-
             <SwiperSlide>
-              <Image 
-                src='./continent_south_america.jpg' 
-                alt='América do Sul'
+              <SwiperContent 
+                image='./continent_south_america.jpg' 
+                alt='América do Sul' 
+                heading='América do Sul' 
+                subtitle='Rico em cultura, ideologia e miscigenação.' 
               />
-              <Heading
-                fontSize="48" 
-                fontWeight= "bold"
-                color="gray.100"
-              >
-                América do Sul
-              </Heading>
-              <Text
-                fontSize="24" 
-                fontWeight= "bold"
-                color="gray.200"
-              >
-                O continente mais antigo
-              </Text>
             </SwiperSlide>
-
             <SwiperSlide>
-              <Image 
-                src='./continent_north_america.jpg' 
-                alt='América do Norte'
+              <SwiperContent 
+                image='./continent_asia.jpg' 
+                alt='Ásia' 
+                heading='Ásia' 
+                subtitle='O maior continente do mundo.' 
               />
-              <Heading
-                fontSize="48" 
-                fontWeight= "bold"
-                color="gray.100"
-              >
-                América do Norte
-              </Heading>
-              <Text
-                fontSize="24" 
-                fontWeight= "bold"
-                color="gray.200"
-              >
-                O continente mais antigo
-              </Text>
             </SwiperSlide>
-
             <SwiperSlide>
-              <Image 
-                src='./continent_asia.jpg' 
-                alt='Asia'
+              <SwiperContent 
+                image='./continent_africa.jpg' 
+                alt='África' 
+                heading='África' 
+                subtitle='Dono do maior deserto do mundo.' 
               />
-              <Heading
-                fontSize="48" 
-                fontWeight= "bold"
-                color="gray.100"
-              >
-                Ásia
-              </Heading>
-              <Text
-                fontSize="24" 
-                fontWeight= "bold"
-                color="gray.200"
-              >
-                O continente mais antigo
-              </Text>
             </SwiperSlide>
-
             <SwiperSlide>
-              <Image 
-                src='./continent_africa.jpg' 
-                alt='África'
+              <SwiperContent 
+                image='./continent_europa.jpg' 
+                alt='Europa' 
+                heading='Europa' 
+                subtitle='O continente mais antigo.' 
               />
-              <Heading
-                fontSize="48" 
-                fontWeight= "bold"
-                color="gray.100"
-              >
-                África
-              </Heading>
-              <Text
-                fontSize="24" 
-                fontWeight= "bold"
-                color="gray.200"
-              >
-                O continente mais antigo
-              </Text>
             </SwiperSlide>
-
             <SwiperSlide>
-              <Image 
-                src='./continent_oceania.jpg' 
-                alt='Oceania'
+              <SwiperContent 
+                image='./continent_oceania.jpg' 
+                alt='Oceania' 
+                heading='Oceania' 
+                subtitle='O menor continente do planeta.' 
               />
-              <Heading
-                fontSize="48" 
-                fontWeight= "bold"
-                color="gray.100"
-              >
-                Oceania
-              </Heading>
-              <Text
-                fontSize="24" 
-                fontWeight= "bold"
-                color="gray.200"
-              >
-                O continente mais antigo
-              </Text>
             </SwiperSlide>
-            
           </Swiper>
-
         </Flex>
-
-
       </Flex>
     </>
   )

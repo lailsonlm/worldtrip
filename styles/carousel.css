@@ -16,6 +16,10 @@
   align-items: center;
 }
 
+.swiper a {
+  color: #FFBA08;
+}
+
 .swiper-slide {
   display: flex;
   position: relative;

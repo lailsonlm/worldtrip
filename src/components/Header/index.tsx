@@ -10,7 +10,7 @@ export function Header() {
         justifyContent="center"
         m="0 auto"
       >
-        <Image src='./logo.svg' alt='Logo' />
+        <Image src='/logo.svg' alt='Logo' />
     </Flex>
   )
 }

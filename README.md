@@ -2,13 +2,12 @@
 worldtrip
 </h1>
 
-![worldtrip capa](https://raw.githubusercontent.com/lailsonlm/worldtrip/5620d6ec5095953dd50fab7ba0f54e08221c852e/public/Thumb.png)
+<div align="center">
+<img src="https://github.com/lailsonlm/worldtrip/blob/main/public/Thumb.png?raw=true" alt="worldtrip capa">
+</div>
+</br>
 
-Aplicação desenvolvida com base no desafio 01 - módulo 04 da trilha de ReactJS (Ignite) da [Rocketseat](https://www.rocketseat.com.br/), simulando uma agência de viagem.
-
-## Tecnologias utilizadas
-
-Aplicação **Next.js**, responsiva, com o uso do **Chakra UI** na construção da interface e API Fake utilizando a feature de **API Routes** do Next.
+Aplicação **Next.js**, responsiva, com o uso do **Chakra UI** na construção da interface e API Fake utilizando a feature de **API Routes** do Next. Desenvolvida com base no desafio 01 - módulo 04 da trilha de ReactJS (Ignite) da [Rocketseat](https://www.rocketseat.com.br/), simulando uma agência de viagem.
 
 ## Execução da aplicação
 

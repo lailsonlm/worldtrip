@@ -12,7 +12,7 @@ export function BannerContinent({ image, continent }: BannerContinentProps) {
       maxW={1440}
       h={500}
       bgImage={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(${image})`}
-      bgPosition="top"
+      bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
     >

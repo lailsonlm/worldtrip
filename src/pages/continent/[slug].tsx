@@ -12,16 +12,17 @@ import { api } from "../../services/api";
 
 interface ContinentProps {
   name: string;
+  banner: string;
   info: {
     description: string;
     countriesCount: number;
     languages: number;
-    citiesCount: number;
   },
   mostVisetedCities: {
     name: string;
     country: string;
     image: string;
+    flag: string;
   }[]
 }
 
@@ -29,7 +30,7 @@ interface DataResult {
   slug: string;
 }
 
-export default function Continent({ name, info, mostVisetedCities }: ContinentProps) {
+export default function Continent({ name, banner, info, mostVisetedCities }: ContinentProps) {
   const router = useRouter()
 
   if (router.isFallback) {
@@ -50,11 +51,16 @@ export default function Continent({ name, info, mostVisetedCities }: ContinentPr
       >
         <Header />
 
-        <BannerContinent image='/banner_europa.png' continent={name} />
+        <BannerContinent image={banner} continent={name} />
 
-        <ContinentInfo infoDescription={info.description} countriesCount={info.countriesCount} languages={info.languages} citiesCount={info.citiesCount} />
+        <ContinentInfo 
+          infoDescription={info.description} 
+          countriesCount={info.countriesCount} 
+          languages={info.languages} 
+          mostVisetedCities={mostVisetedCities}
+        />
 
-        <ContinentCities name={mostVisetedCities[0].name} country={mostVisetedCities[0].country} image={mostVisetedCities[0].image} />
+        <ContinentCities mostVisetedCities={mostVisetedCities} />
 
       </Flex>
     </>
@@ -64,7 +70,8 @@ export default function Continent({ name, info, mostVisetedCities }: ContinentPr
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
     paths: [
-      { params: { slug: 'america-do-norte' } }
+      { params: { slug: 'america-do-norte' } },
+      { params: { slug: 'asia' } },
     ],
     fallback: true,
   }
@@ -91,11 +98,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       name: dataResult.name,
+      banner: dataResult.banner,
       info: {
         description: dataResult.info.description,
         countriesCount: dataResult.info.countriesCount,
         languages: dataResult.info.languages,
-        citiesCount: dataResult.info.citiesCount,
       },
       mostVisetedCities: dataResult.mostVisetedCities
     }

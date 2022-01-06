@@ -7,7 +7,7 @@ worldtrip
 </div>
 </br>
 
-Aplicação **Next.js**, responsiva, com o uso do **Chakra UI** na construção da interface e API Fake utilizando a feature de **API Routes** do Next. Desenvolvida com base no desafio 01 - módulo 04 da trilha de ReactJS (Ignite) da [Rocketseat](https://www.rocketseat.com.br/), simulando uma agência de viagem.
+Aplicação **Next.js**, responsiva, com o uso do **Chakra UI** na construção da interface e API Fake para listagem dos continentes e cidades utilizando a feature de **API Routes** do Next. Desenvolvida com base no desafio 01 - módulo 04 da trilha de ReactJS (Ignite) da [Rocketseat](https://www.rocketseat.com.br/), simulando uma agência de viagem.
 
 ## Execução da aplicação
 
@@ -32,4 +32,4 @@ yarn dev
 **Lailson Sobral**
 
 - Github: [@lailsonlm](https://github.com/lailsonlm)
-- LinkedIn: [@lailsonlm](https://linkedin.com/in/lailsonlm)
+- LinkedIn: [@lailsonlm](https://linkedin.com/in/lailsonsobral)

@@ -1,199 +1,87 @@
 import { Box, Flex, Grid, Heading, Image, Text } from "@chakra-ui/react";
 
 interface ContinentCitiesProps {
-  name: string;
-  country: string;
-  image: string;
+  mostVisetedCities: {
+    name: string;
+    country: string;
+    image: string;
+    flag: string;
+  }[]
 }
 
-export function ContinentCities({ name, country, image }: ContinentCitiesProps) {
+export function ContinentCities({ mostVisetedCities }: ContinentCitiesProps) {
   return (
-    <Box
-      w="1160px"  
-      m="0px auto"
-    >
-      <Heading
-        fontSize="36" 
-        fontWeight= "medium"
-        color="gray.400"
-        mb="40px"
-      >
-        Cidades +100
-      </Heading>
-
-      <Grid templateColumns='repeat(4, 1fr)' gap="45">
-        <Box 
-          w='100%' 
-          maxW={256}
-          border="1px solid rgba(255, 186, 8, 0.5)"
-          borderRadius={4}
+        <Box
+          w="1160px"  
+          m="0px auto"
+          
         >
-          <Image src='/londres.png' alt="Londres" w={256}/>
+          <Heading
+            fontSize="36" 
+            fontWeight= "medium"
+            color="gray.400"
+            mb="40px"
+          >
+            Cidades +100
+          </Heading>
+          <Grid templateColumns='repeat(4, 1fr)' gap="45">
 
-          <Flex justifyContent="space-between" alignItems="center" p="24px">
-            <Flex flexDir="column">
-              <Heading
-                fontSize="20" 
-                fontWeight= "semibold"
-                lineHeight="25px"
-                color="gray.400"
-                mb="12px"
-              >
-                {name}
-              </Heading>
+          {mostVisetedCities.map((city) => {
+            return (
+                <Box 
+                  w='100%' 
+                  maxW={256} 
+                  border="1px solid rgba(255, 186, 8, 0.5)"
+                  borderRadius={4}
+                  key={city.name}
+                >
+                  <Box 
+                    w='100%'
+                    h={173}
+                    borderTopRadius={4}
+                    bgImage={`url(${city.image})`}
+                    bgSize="cover"
+                  />
 
-              <Text
-                fontSize="16" 
-                fontWeight= "medium"
-                lineHeight="26px"
-                color="gray.300"
-                
-              >
-                {country}
-              </Text>
-            </Flex>
+                  <Flex justifyContent="space-between" alignItems="center" p="24px">
+                    <Flex flexDir="column">
+                      <Heading
+                        fontSize="20" 
+                        fontWeight= "semibold"
+                        lineHeight="25px"
+                        color="gray.400"
+                        mb="12px"
+                      >
+                        {city.name}
+                      </Heading>
 
-            <Image src={image} alt={name} w="30px" h="30px" borderRadius="50%" />
-          </Flex>
-        </Box>
-        <Box 
-          w='100%' 
-          maxW={256}
-          border="1px solid rgba(255, 186, 8, 0.5)"
-          borderRadius={4}
-        >
-          <Image src='/londres.png' alt="Londres" w={256}/>
+                      <Text
+                        fontSize="16" 
+                        fontWeight= "medium"
+                        lineHeight="26px"
+                        color="gray.300"
+                        
+                      >
+                        {city.country}
+                      </Text>
+                    </Flex>
 
-          <Flex justifyContent="space-between" alignItems="center" p="24px">
-            <Flex flexDir="column">
-              <Heading
-                fontSize="20" 
-                fontWeight= "semibold"
-                lineHeight="25px"
-                color="gray.400"
-                mb="12px"
-              >
-                Londres
-              </Heading>
+                    <Box 
+                    w="30px"
+                    h="30px"
+                    bgImage={`url(${city.flag})`}
+                    bgSize="100% 100%"
+                    bgPosition="center"
+                    borderRadius="50%"
+                    bgRepeat="no-repeat"
+                    />
 
-              <Text
-                fontSize="16" 
-                fontWeight= "medium"
-                lineHeight="26px"
-                color="gray.300"
-                
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-
-            <Image src='/ellipse_londres.png' alt="Londres"/>
-          </Flex>
-        </Box>
-        <Box 
-          w='100%' 
-          maxW={256}
-          border="1px solid rgba(255, 186, 8, 0.5)"
-          borderRadius={4}
-        >
-          <Image src='/londres.png' alt="Londres" w={256}/>
-
-          <Flex justifyContent="space-between" alignItems="center" p="24px">
-            <Flex flexDir="column">
-              <Heading
-                fontSize="20" 
-                fontWeight= "semibold"
-                lineHeight="25px"
-                color="gray.400"
-                mb="12px"
-              >
-                Londres
-              </Heading>
-
-              <Text
-                fontSize="16" 
-                fontWeight= "medium"
-                lineHeight="26px"
-                color="gray.300"
-                
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-
-            <Image src='/ellipse_londres.png' alt="Londres"/>
-          </Flex>
-        </Box>
-        <Box 
-          w='100%' 
-          maxW={256}
-          border="1px solid rgba(255, 186, 8, 0.5)"
-          borderRadius={4}
-        >
-          <Image src='/londres.png' alt="Londres" w={256}/>
-
-          <Flex justifyContent="space-between" alignItems="center" p="24px">
-            <Flex flexDir="column">
-              <Heading
-                fontSize="20" 
-                fontWeight= "semibold"
-                lineHeight="25px"
-                color="gray.400"
-                mb="12px"
-              >
-                Londres
-              </Heading>
-
-              <Text
-                fontSize="16" 
-                fontWeight= "medium"
-                lineHeight="26px"
-                color="gray.300"
-                
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-
-            <Image src='/ellipse_londres.png' alt="Londres"/>
-          </Flex>
-        </Box>
-        <Box 
-          w='100%' 
-          maxW={256}
-          border="1px solid rgba(255, 186, 8, 0.5)"
-          borderRadius={4}
-        >
-          <Image src='/londres.png' alt="Londres" w={256}/>
-
-          <Flex justifyContent="space-between" alignItems="center" p="24px">
-            <Flex flexDir="column">
-              <Heading
-                fontSize="20" 
-                fontWeight= "semibold"
-                lineHeight="25px"
-                color="gray.400"
-                mb="12px"
-              >
-                Londres
-              </Heading>
-
-              <Text
-                fontSize="16" 
-                fontWeight= "medium"
-                lineHeight="26px"
-                color="gray.300"
-                
-              >
-                Reino Unido
-              </Text>
-            </Flex>
-
-            <Image src='/ellipse_londres.png' alt="Londres"/>
-          </Flex>
-        </Box>
-
-      </Grid>
+                  </Flex>
+                </Box>
+            
+            )
+          })}
+        </Grid>
     </Box>
   )
 }

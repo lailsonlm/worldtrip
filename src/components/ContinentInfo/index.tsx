@@ -16,10 +16,15 @@ interface ContinentInfoProps {
   infoDescription: string;
   countriesCount: number;
   languages: number;
-  citiesCount: number;
+  mostVisetedCities: {
+    name: string;
+    country: string;
+    image: string;
+    flag: string;
+  }[]
 }
 
-export function ContinentInfo({ infoDescription, countriesCount, languages, citiesCount }: ContinentInfoProps) {
+export function ContinentInfo({ infoDescription, countriesCount, languages,  mostVisetedCities }: ContinentInfoProps) {
   return (
     <Flex
       w="100%"
@@ -87,7 +92,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages, citi
             fontWeight= "semibold"
             color="yellow.400"
           >
-            {citiesCount}
+            {mostVisetedCities.length}
           </Heading>
           <Flex alignItems="center">
             <Text
@@ -105,8 +110,13 @@ export function ContinentInfo({ infoDescription, countriesCount, languages, citi
               <PopoverContent border="2px" borderColor='yellow.400' _focus={{ outline: "none" }} >
                 <PopoverArrow borderLeft="2px" borderTop="2px" borderColor='yellow.400' />
                 <PopoverCloseButton />
-                <PopoverHeader>Entre as 100+ visitadas no Mundo!</PopoverHeader>
-                <PopoverBody>Hong Kong, Bangkok, Londres, Singapura, Macau, Paris</PopoverBody>
+                <PopoverHeader>100+ visitadas no Mundo!</PopoverHeader>
+                <PopoverBody>
+                  {mostVisetedCities.map(city => city.name)
+                    .reduce((previousValue, currentValue)=> {
+                    return previousValue + ', ' + currentValue
+                  })}
+                </PopoverBody>
               </PopoverContent>
             </Popover>
             

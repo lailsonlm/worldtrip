@@ -11,6 +11,7 @@ import { Header } from "../../components/Header";
 import { api } from "../../services/api";
 
 interface ContinentProps {
+  slug: string;
   name: string;
   banner: string;
   info: {
@@ -69,20 +70,18 @@ export default function Continent({ name, banner, info, mostVisetedCities }: Con
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: [
-      { params: { slug: 'america-do-norte' } },
-      { params: { slug: 'asia' } },
-    ],
+    paths: [{ params: { slug: 'asia' } }],
     fallback: true,
   }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const res = await api.get(`continents/${params?.slug}`)
+  const { slug } = params
+  const res = await api.get(`continents/${slug}`)
   const data = await res.data
 
   const dataResult = data.find((res: DataResult) => {
-    return res.slug === params?.slug
+    return res.slug === slug
   })
 
  
@@ -97,6 +96,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
+      slug,
       name: dataResult.name,
       banner: dataResult.banner,
       info: {

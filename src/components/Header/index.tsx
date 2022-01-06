@@ -6,9 +6,9 @@ export function Header() {
   const router = useRouter()
   return (
     <Flex 
-        maxW={1440}
         w="100%"
-        h={100} 
+        maxW={["375px", "1440px"]}
+        h={["50px", "100px"]} 
         alignItems="center" 
         justifyContent="center"
         m="0 auto"
@@ -17,11 +17,11 @@ export function Header() {
         {router.asPath != '/' && 
           <Link href='/' passHref >
             <LinkChakra>
-              <Image src='/buttonPrev.svg' alt='Botão de Voltar' position="absolute" left= "140px" top= "34px" /> 
+              <Image src='/buttonPrev.svg' alt='Botão de Voltar' position="absolute" left= {["16px", "140px"]} top= {["17px", "34px"]} w={["16px", "32px"]} h={["16px", "32px"]} /> 
             </LinkChakra>
           </Link>
         }
-        <Image src='/logo.svg' alt='Logo' />
+        <Image src='/logo.svg' alt='Logo' w={["81px", "184.06px"]} h={["20px", "45.92px"]} />
     </Flex>
   )
 }

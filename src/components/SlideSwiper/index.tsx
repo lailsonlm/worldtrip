@@ -8,7 +8,7 @@ export function SlideSwiper() {
     <Flex
           w="100%"
           maxW={1240}
-          h={450}
+          h={[250, 450]}
           m="0 auto"
         >
           <Swiper 
@@ -31,16 +31,17 @@ export function SlideSwiper() {
                       alt='América do Norte'
                     />
                     <Heading
-                      fontSize="48" 
+                      fontSize={["24", "48"]} 
                       fontWeight= "bold"
                       color="gray.100"
                     >
                       América do Norte
                     </Heading>
                     <Text
-                      fontSize="24" 
+                      fontSize={["14", "24"]} 
                       fontWeight= "bold"
                       color="gray.200"
+                      p="0 16px"
                     >
                       Formada por três países: Estados Unidos, Canadá e México.
                     </Text>
@@ -58,14 +59,14 @@ export function SlideSwiper() {
                       alt='América do Sul'
                     />
                     <Heading
-                      fontSize="48" 
+                      fontSize={["24", "48"]}  
                       fontWeight= "bold"
                       color="gray.100"
                     >
                       América do Sul
                     </Heading>
                     <Text
-                      fontSize="24" 
+                      fontSize={["14", "24"]} 
                       fontWeight= "bold"
                       color="gray.200"
                     >
@@ -85,14 +86,14 @@ export function SlideSwiper() {
                       alt='Ásia'
                     />
                     <Heading
-                      fontSize="48" 
+                      fontSize={["24", "48"]}  
                       fontWeight= "bold"
                       color="gray.100"
                     >
                       Ásia
                     </Heading>
                     <Text
-                      fontSize="24" 
+                      fontSize={["14", "24"]} 
                       fontWeight= "bold"
                       color="gray.200"
                     >
@@ -112,14 +113,14 @@ export function SlideSwiper() {
                       alt='África'
                     />
                     <Heading
-                      fontSize="48" 
+                      fontSize={["24", "48"]}  
                       fontWeight= "bold"
                       color="gray.100"
                     >
                       África
                     </Heading>
                     <Text
-                      fontSize="24" 
+                      fontSize={["14", "24"]}
                       fontWeight= "bold"
                       color="gray.200"
                     >
@@ -139,14 +140,14 @@ export function SlideSwiper() {
                       alt='Europa'
                     />
                     <Heading
-                      fontSize="48" 
+                      fontSize={["24", "48"]}  
                       fontWeight= "bold"
                       color="gray.100"
                     >
                       Europa
                     </Heading>
                     <Text
-                      fontSize="24" 
+                      fontSize={["14", "24"]} 
                       fontWeight= "bold"
                       color="gray.200"
                     >
@@ -166,14 +167,14 @@ export function SlideSwiper() {
                       alt='Oceania'
                     />
                     <Heading
-                      fontSize="48" 
+                      fontSize={["24", "48"]} 
                       fontWeight= "bold"
                       color="gray.100"
                     >
                       Oceania
                     </Heading>
                     <Text
-                      fontSize="24" 
+                      fontSize={["14", "24"]}
                       fontWeight= "bold"
                       color="gray.200"
                     >

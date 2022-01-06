@@ -44,7 +44,7 @@ export default function Continent({ name, banner, info, mostVisetedCities }: Con
       </Head>
       
       <Flex 
-        w="1440px" 
+        w={["100%", "1440px"]} 
         h="100%" 
         m="0px auto 100px"
         flexDir="column"

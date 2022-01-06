@@ -29,16 +29,18 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
     <Flex
       w="100%"
       maxW={1160}
+      flexDir={["column", "row"]}
       alignItems="center"
-      justifyContent="space-between"
-      m="80px auto"
+      justifyContent={["center", "space-between"]}
+      m={["24px auto", "80px auto"]}
     >
       <Flex
         maxW={600}
+        m={["0 16px 16px", "0 auto"]}
       >
         <Text 
           textAlign="justify"
-          fontSize="24" 
+          fontSize={["14px", "24px"]} 
           fontWeight= "regular"
           color="gray.400"
         >
@@ -47,20 +49,21 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
       </Flex>
 
       <Flex
-        w={490}
+        maxW={["343px", "490px"]}
+        w="100%"
         alignItems="center"
         justifyContent="space-between"
       >
-        <Flex flexDir="column" alignItems="center">
+        <Flex flexDir="column" alignItems="left">
           <Heading
-            fontSize="48" 
+            fontSize={["24px", "48px"]} 
             fontWeight= "semibold"
             color="yellow.400"
           >
             {countriesCount}
           </Heading>
           <Text
-            fontSize="24" 
+            fontSize={["18px", "24px"]} 
             fontWeight= "semibold"
             color="gray.400"
           >
@@ -68,27 +71,26 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
           </Text>
         </Flex>
         <Flex
-          flexDir="column" alignItems="center"
-          // m="0 42px"
+          flexDir="column" alignItems="left"
         >
           <Heading
-            fontSize="48" 
+            fontSize={["24px", "48px"]}
             fontWeight= "semibold"
             color="yellow.400"
           >
             {languages}
           </Heading>
           <Text
-            fontSize="24" 
+            fontSize={["18px", "24px"]} 
             fontWeight= "semibold"
             color="gray.400"
           >
             línguas
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems="center">
+        <Flex flexDir="column" alignItems="left">
         <Heading
-            fontSize="48" 
+            fontSize={["24px", "48px"]}  
             fontWeight= "semibold"
             color="yellow.400"
           >
@@ -96,7 +98,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
           </Heading>
           <Flex alignItems="center">
             <Text
-              fontSize="24" 
+              fontSize={["18px", "24px"]}  
               fontWeight= "semibold"
               color="gray.400"
               mr="5px"
@@ -105,7 +107,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
             </Text>
             <Popover>
               <PopoverTrigger>
-                <Image src="/info.svg" alt="Informações" _hover={{cursor: "pointer"}} />
+                <Image src="/info.svg" alt="Informações" _hover={{cursor: "pointer"}} w={["10px", "16px"]} h={["10px", "16px"]} />
               </PopoverTrigger>
               <PopoverContent border="2px" borderColor='yellow.400' _focus={{ outline: "none" }} >
                 <PopoverArrow borderLeft="2px" borderTop="2px" borderColor='yellow.400' />

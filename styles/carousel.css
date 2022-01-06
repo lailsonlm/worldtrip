@@ -67,3 +67,22 @@
   background: #FFBA08;
 }
 
+
+@media (max-width: 479px) {
+  .swiper-button-prev::after, .swiper-button-next::after {
+    font-size: 1rem;
+  }
+
+  .swiper-button-prev {
+    margin-left: 20px;
+  }
+  
+  .swiper-button-next {
+    margin-right: 20px;
+  }
+  
+  .swiper-pagination-bullet, .swiper-pagination-bullet-active {
+    width: 8px;
+    height: 8px;
+  }
+}

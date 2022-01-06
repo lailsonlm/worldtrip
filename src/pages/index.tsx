@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Flex, Heading, Box } from '@chakra-ui/react'
+import { Flex, Heading, Box, Grid, GridItem } from '@chakra-ui/react'
 
 
 import { Header } from "../components/Header";
@@ -9,6 +9,7 @@ import { SlideSwiper } from "../components/SlideSwiper";
 
 
 export default function Home () {
+  
   return (
     <>
       <Head>
@@ -16,7 +17,7 @@ export default function Home () {
       </Head>
       
       <Flex 
-        w="1440px" 
+        w={["100%", "1440px"]} 
         h="100%" 
         m="0px auto 100px"
         flexDir="column"
@@ -25,27 +26,30 @@ export default function Home () {
 
         <BannerHome />
 
-        <Flex
+        <Grid
+          gridTemplateColumns={["repeat(2, 1fr)", "repeat(5, 1fr)"]}
           w="100%"
           maxW={1160}
           h={145}
-          m="80.79px auto 80px auto"
+          m={["36px auto", "80px auto"]}
           justifyContent="space-between"
+          alignItems="center"
         >
           <TravelTypes image='/cocktail.svg' alt='Vida Noturna' subtitle="vida noturna" />
           <TravelTypes image='/surf.svg' alt='Praia' subtitle="praia" />
           <TravelTypes image='/building.svg' alt='Moderno' subtitle="moderno" />
           <TravelTypes image='/museum.svg' alt='Clássico' subtitle="clássico" />
-          <TravelTypes image='/earth.svg' alt='e mais...' subtitle="e mais..." />
+          <GridItem colSpan={[2, 1]}>
+            <TravelTypes image='/earth.svg' alt='e mais...' subtitle="e mais..."/>
+          </GridItem>
+        </Grid>
 
-        </Flex>
-
-        <Box w={90} border='2px' borderColor="gray.400" m="0 auto" />
+        <Box w={["60px", "90px"]} border={['1px', '2px']} borderColor="gray.400" m="0 auto" />
 
         <Heading
-          m="52px auto"
+          m={["24px auto 20px", "52px auto"]}
           textAlign="center"
-          fontSize="36" 
+          fontSize={["20", "36"]} 
           fontWeight= "medium"
         >
           Vamos nessa? <br/> Então escolha seu continente

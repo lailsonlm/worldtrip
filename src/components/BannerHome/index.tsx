@@ -1,45 +1,53 @@
-import { Box, Flex, Heading, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, useBreakpointValue } from "@chakra-ui/react";
 
 export function BannerHome() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    sm: true,
+  })
+  
   return (
     <Flex
       w="100%"
       maxW={1440}
-      h={368.21}
-      justifyContent="space-between"
+      h={["163px", "368.21px"]}
+      justifyContent={["flex-start","space-between"]}
       bgImage="url('/bg_banner_home.png')"
       bgPosition="top"
       bgRepeat="no-repeat"
     >
       <Box
-        mt="80px"
-        ml="140px"
+        mt={["28px", "80px"]}
+        ml={["16px", "140px"]}
+        w="100%"
         maxW={524}
       >
         <Heading 
-          fontSize="36" 
+          fontSize={["20" ,"36"]} 
           fontWeight= "medium"
           color="gray.100"
-          mb="20px"
+          mb={["8px", "20px"]}
         >
           5 Continentes,<br/> infinitas possibilidades.
         </Heading>
 
         <Text
-          fontSize="20" 
+          fontSize={["14" ,"20"]}
           fontWeight= "regular"
           color="gray.200"
+          mr={["26px"]}
         >
           Chegou a hora de tirar do papel a viagem que você sempre sonhou.
         </Text>
       </Box>
-
-      <Image 
-        src='/airplane.svg' 
-        alt='Avião' 
-        mt="76px" 
-        mr="140px" 
-        />
+      {isWideVersion && 
+        <Image 
+          src='/airplane.svg' 
+          alt='Avião' 
+          mt="76px" 
+          mr="140px" 
+          />    
+      }
     </Flex>
   )
 }

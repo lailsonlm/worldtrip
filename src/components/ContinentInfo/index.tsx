@@ -54,7 +54,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
         alignItems="center"
         justifyContent="space-between"
       >
-        <Flex flexDir="column" alignItems="left">
+        <Flex flexDir="column" alignItems={["left", "center"]}>
           <Heading
             fontSize={["24px", "48px"]} 
             fontWeight= "semibold"
@@ -71,7 +71,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
           </Text>
         </Flex>
         <Flex
-          flexDir="column" alignItems="left"
+          flexDir="column" alignItems={["left", "center"]}
         >
           <Heading
             fontSize={["24px", "48px"]}
@@ -88,7 +88,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
             línguas
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems="left">
+        <Flex flexDir="column" alignItems={["left", "center"]}>
         <Heading
             fontSize={["24px", "48px"]}  
             fontWeight= "semibold"

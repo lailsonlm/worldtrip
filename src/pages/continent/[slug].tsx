@@ -27,8 +27,8 @@ interface ContinentProps {
   }[]
 }
 
-interface DataResult {
-  slug: string;
+interface DataResult extends ContinentProps {
+  
 }
 
 export default function Continent({ name, banner, info, mostVisetedCities }: ContinentProps) {
@@ -69,8 +69,16 @@ export default function Continent({ name, banner, info, mostVisetedCities }: Con
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+  const res = await api.get('allContinents')
+  const continent = await res.data
+
+  const paths = continent.map((res) => ({
+    params: { slug: res.slug },
+  }))
+
+
   return {
-    paths: [{ params: { slug: 'asia' } }],
+    paths,
     fallback: true,
   }
 }
@@ -105,6 +113,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         languages: dataResult.info.languages,
       },
       mostVisetedCities: dataResult.mostVisetedCities
-    }
+    },
+    revalidate: 10
   }
 }

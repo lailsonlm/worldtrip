@@ -7,7 +7,7 @@ export function Header() {
   return (
     <Flex 
         w="100%"
-        maxW={["375px", "1440px"]}
+        maxW= "1440px"
         h={["50px", "100px"]} 
         alignItems="center" 
         justifyContent="center"

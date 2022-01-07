@@ -9,7 +9,7 @@ export function BannerContinent({ image, continent }: BannerContinentProps) {
   return (
     <Flex
       w="100%"
-      maxW={["375px", "1440px"]}
+      maxW={["100%", "1440px"]}
       h={["150px", "500px"]}
       bgImage={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(${image})`}
       bgPosition="center"

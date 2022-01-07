@@ -17,7 +17,8 @@ export default function Home () {
       </Head>
       
       <Flex 
-        w={["100%", "1440px"]} 
+        w="100%"
+        maxW= "1440px"
         h="100%" 
         m="0px auto 100px"
         flexDir="column"

@@ -12,9 +12,9 @@ interface ContinentCitiesProps {
 export function ContinentCities({ mostVisetedCities }: ContinentCitiesProps) {
   return (
         <Box
-          maxW={["300px", "1160px"]}
           w="100%"
-          m={["0px auto auto 16px", "0px auto"]}
+          maxW={["414px", "1160px"]}
+          p={["0px 16px", "0px auto"]}
           
         >
           <Heading
@@ -25,7 +25,7 @@ export function ContinentCities({ mostVisetedCities }: ContinentCitiesProps) {
           >
             Cidades +100
           </Heading>
-          <Grid templateColumns={['repeat(1, 1fr)', 'repeat(4, 1fr)']} gap={["20px", "45px"]} justifyItems={["end", "stretch"]} >
+          <Grid templateColumns={['repeat(1, 1fr)', 'repeat(4, 1fr)']} gap={["20px", "45px"]} justifyItems={["center", "stretch"]} >
 
           {mostVisetedCities.map((city) => {
             return (

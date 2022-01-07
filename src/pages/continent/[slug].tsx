@@ -72,6 +72,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const res = await api.get('allContinents')
   const continent = await res.data
 
+
   const paths = continent.map((res) => ({
     params: { slug: res.slug },
   }))
@@ -114,6 +115,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
       mostVisetedCities: dataResult.mostVisetedCities
     },
-    revalidate: 10
+    revalidate: 60 * 60
   }
 }

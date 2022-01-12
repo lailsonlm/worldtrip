@@ -28,18 +28,20 @@ export default function Home () {
         <BannerHome />
 
         <Grid
-          gridTemplateColumns={["repeat(2, 1fr)", "repeat(5, 1fr)"]}
+          gridTemplateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)", "repeat(5, 1fr)"]}
           w="100%"
           maxW={1160}
-          h={145}
-          m={["36px auto", "80px auto"]}
+          minH={145}
+          m={["36px auto","36px auto", "36px auto", "80px auto"]}
+          p="0 20px"
           justifyContent="space-between"
           alignItems="center"
+          gap={[0, 6, 0]}
         >
           <TravelTypes image='/cocktail.svg' alt='Vida Noturna' subtitle="vida noturna" />
           <TravelTypes image='/surf.svg' alt='Praia' subtitle="praia" />
           <TravelTypes image='/building.svg' alt='Moderno' subtitle="moderno" />
-          <TravelTypes image='/museum.svg' alt='Clássico' subtitle="clássico" />
+            <TravelTypes image='/museum.svg' alt='Clássico' subtitle="clássico" />
           <GridItem colSpan={[2, 1]}>
             <TravelTypes image='/earth.svg' alt='e mais...' subtitle="e mais..."/>
           </GridItem>
@@ -50,7 +52,7 @@ export default function Home () {
         <Heading
           m={["24px auto 20px", "52px auto"]}
           textAlign="center"
-          fontSize={["20", "36"]} 
+          fontSize={["20", "28", "36"]} 
           fontWeight= "medium"
         >
           Vamos nessa? <br/> Então escolha seu continente

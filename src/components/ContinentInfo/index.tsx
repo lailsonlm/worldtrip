@@ -29,14 +29,14 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
     <Flex
       w="100%"
       maxW={1160}
-      flexDir={["column", "row"]}
+      flexDir={["column", "column", "column", "row"]}
       alignItems="center"
       justifyContent={["center", "space-between"]}
       m={["24px auto", "80px auto"]}
     >
       <Flex
         maxW={600}
-        m={["0 16px 16px", "0 auto"]}
+        m={["0 16px 16px", "0 16px 16px", "0 16px 16px", "0 0 0 16px"]}
       >
         <Text 
           textAlign="justify"
@@ -52,18 +52,19 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
         maxW={["343px", "490px"]}
         w="100%"
         alignItems="center"
-        justifyContent="space-between"
+        justifyContent="space-around"
+        ml="16px"
       >
-        <Flex flexDir="column" alignItems={["left", "center"]}>
+        <Flex flexDir="column" alignItems={["left", "left", "center"]}>
           <Heading
-            fontSize={["24px", "48px"]} 
+            fontSize={["24px", "36px", "48px"]} 
             fontWeight= "semibold"
             color="yellow.400"
           >
             {countriesCount}
           </Heading>
           <Text
-            fontSize={["18px", "24px"]} 
+            fontSize={["18px", "20px", "24px"]} 
             fontWeight= "semibold"
             color="gray.400"
           >
@@ -71,26 +72,26 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
           </Text>
         </Flex>
         <Flex
-          flexDir="column" alignItems={["left", "center"]}
+          flexDir="column" alignItems={["left", "left", "center"]}
         >
           <Heading
-            fontSize={["24px", "48px"]}
+            fontSize={["24px", "36px", "48px"]}
             fontWeight= "semibold"
             color="yellow.400"
           >
             {languages}
           </Heading>
           <Text
-            fontSize={["18px", "24px"]} 
+            fontSize={["18px", "20px", "24px"]} 
             fontWeight= "semibold"
             color="gray.400"
           >
             línguas
           </Text>
         </Flex>
-        <Flex flexDir="column" alignItems={["left", "center"]}>
+        <Flex flexDir="column" alignItems={["left", "left", "center"]}>
         <Heading
-            fontSize={["24px", "48px"]}  
+            fontSize={["24px", "36px", "48px"]}  
             fontWeight= "semibold"
             color="yellow.400"
           >
@@ -98,7 +99,7 @@ export function ContinentInfo({ infoDescription, countriesCount, languages,  mos
           </Heading>
           <Flex alignItems="center">
             <Text
-              fontSize={["18px", "24px"]}  
+              fontSize={["18px", "20px", "24px"]}  
               fontWeight= "semibold"
               color="gray.400"
               mr="5px"

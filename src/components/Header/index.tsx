@@ -17,7 +17,7 @@ export function Header() {
         {router.asPath != '/' && 
           <Link href='/' passHref >
             <LinkChakra>
-              <Image src='/buttonPrev.svg' alt='Botão de Voltar' position="absolute" left= {["16px", "140px"]} top= {["17px", "34px"]} w={["16px", "32px"]} h={["16px", "32px"]} /> 
+              <Image src='/buttonPrev.svg' alt='Botão de Voltar' position="absolute" left= {["16px", "16px", "140px"]} top= {["17px", "34px"]} w={["16px", "32px"]} h={["16px", "32px"]} /> 
             </LinkChakra>
           </Link>
         }

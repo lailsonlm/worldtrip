@@ -3,27 +3,28 @@ import { Box, Flex, Heading, Text, Image, useBreakpointValue } from "@chakra-ui/
 export function BannerHome() {
   const isWideVersion = useBreakpointValue({
     base: false,
-    sm: true,
+    md: true,
   })
   
   return (
     <Flex
       w="100%"
       maxW={1440}
-      h={["163px", "368.21px"]}
-      justifyContent={["flex-start","space-between"]}
+      h={["163px", "300px", "368.21px"]}
+      justifyContent={["flex-start","flex-start","space-around"]}
       bgImage="url('/bg_banner_home.png')"
       bgPosition="top"
       bgRepeat="no-repeat"
     >
       <Box
         mt={["28px", "80px"]}
-        ml={["16px", "140px"]}
+        ml={["16px", "50px"]}
+        mr={["26px"]}
         w="100%"
         maxW={524}
       >
         <Heading 
-          fontSize={["20" ,"36"]} 
+          fontSize={["20", "28", "36"]} 
           fontWeight= "medium"
           color="gray.100"
           mb={["8px", "20px"]}
@@ -32,10 +33,9 @@ export function BannerHome() {
         </Heading>
 
         <Text
-          fontSize={["14" ,"20"]}
+          fontSize={["14", "18", "20"]}
           fontWeight= "regular"
           color="gray.200"
-          mr={["26px"]}
         >
           Chegou a hora de tirar do papel a viagem que você sempre sonhou.
         </Text>
@@ -45,7 +45,9 @@ export function BannerHome() {
           src='/airplane.svg' 
           alt='Avião' 
           mt="76px" 
-          mr="140px" 
+          mr={["50px"]}
+          w="100%"
+          maxW={["300px", "300px","380px", "417.15px"]}
           />    
       }
     </Flex>

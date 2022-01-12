@@ -10,7 +10,7 @@ export function BannerContinent({ image, continent }: BannerContinentProps) {
     <Flex
       w="100%"
       maxW={["100%", "1440px"]}
-      h={["150px", "500px"]}
+      h={["150px", "300px", "300px", "500px"]}
       bgImage={`linear-gradient(0deg, rgba(28, 20, 1, 0.35), rgba(28, 20, 1, 0.35)), url(${image})`}
       bgPosition="center"
       bgRepeat="no-repeat"
@@ -21,7 +21,7 @@ export function BannerContinent({ image, continent }: BannerContinentProps) {
         fontSize={["28", "48"]} 
         fontWeight= "semibold"
         color="gray.100"
-        m={["0 auto", "369px auto auto 140px"]}
+        m={["0 auto", "0 auto", "0 auto", "369px auto auto 50px", "369px auto auto 140px"]}
       >
         {continent}
       </Heading>

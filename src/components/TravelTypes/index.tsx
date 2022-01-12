@@ -19,12 +19,13 @@ export function TravelTypes({ image, alt, subtitle }:TravelTypesProps)  {
           src={image} 
           alt={alt} 
           mb="24px"
+          w={["70px","70px", "70px", "85px"]}
         />
       :
         <Text fontSize="24" color="yellow.400" mr="8px">•</Text>   
       }
       <Text
-        fontSize={["18", "24"]} 
+        fontSize={["18", "18", "18", "24"]} 
         fontWeight= {["medium", "semibold"]}
         color="gray.400"
         textAlign="center"

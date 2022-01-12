@@ -8,7 +8,7 @@ export function SlideSwiper() {
     <Flex
           w="100%"
           maxW={1240}
-          h={[250, 450]}
+          h={[250, 350, 450]}
           m="0 auto"
         >
           <Swiper 
